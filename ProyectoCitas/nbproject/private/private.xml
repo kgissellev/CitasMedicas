@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Daniel%20Castro/Documents/NetBeansProjects/ProyectoCitas/src/vista/ConsPacienteInternalFrame.java</file>
-            <file>file:/C:/Users/Daniel%20Castro/Documents/NetBeansProjects/ProyectoCitas/src/vista/PrincipalJFrame.java</file>
-            <file>file:/C:/Users/Daniel%20Castro/Documents/NetBeansProjects/ProyectoCitas/src/proyectocitas/ProyectoCitas.java</file>
-            <file>file:/C:/Users/Daniel%20Castro/Documents/NetBeansProjects/ProyectoCitas/src/vista/RegpacienteInternalFrame.java</file>
+            <file>file:/C:/Users/kgramirez/Documents/2105524%20ADSI%20I/Trimestre%20III/Johanna%20-%20Taller/ProyectoCitas/src/Modelo/Consultorio.java</file>
+            <file>file:/C:/Users/kgramirez/Documents/2105524%20ADSI%20I/Trimestre%20III/Johanna%20-%20Taller/ProyectoCitas/src/Controlador/GestorConsultorioControl.java</file>
+            <file>file:/C:/Users/kgramirez/Documents/2105524%20ADSI%20I/Trimestre%20III/Johanna%20-%20Taller/ProyectoCitas/src/Modelo/GestorConsultorio.java</file>
+            <file>file:/C:/Users/kgramirez/Documents/2105524%20ADSI%20I/Trimestre%20III/Johanna%20-%20Taller/ProyectoCitas/src/Controlador/GestorMedicoControl.java</file>
+            <file>file:/C:/Users/kgramirez/Documents/2105524%20ADSI%20I/Trimestre%20III/Johanna%20-%20Taller/ProyectoCitas/src/vista/ConsConsultorioInternalFrame.java</file>
+            <file>file:/C:/Users/kgramirez/Documents/2105524%20ADSI%20I/Trimestre%20III/Johanna%20-%20Taller/ProyectoCitas/src/vista/ConsMedicoInternalFrame.java</file>
+            <file>file:/C:/Users/kgramirez/Documents/2105524%20ADSI%20I/Trimestre%20III/Johanna%20-%20Taller/ProyectoCitas/src/Controlador/ConsultorioControl.java</file>
         </group>
     </open-files>
 </project-private>

@@ -4,29 +4,32 @@
  * and open the template in the editor.
  */
 package vista;
+import Controlador.GestorMedicoControl;
 import javax.swing.table.DefaultTableModel;
-
 /**
  *
- * @author Daniel Castro
+ * @author kgramirez
  */
-public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
+public class ConsMedicoInternalFrame extends javax.swing.JInternalFrame {
 
+    /**
+     * Creates new form ConsMedicoInternalFrame
+     */
     public Controlador.GestorPacienteControl gestorPacienteControl;
-    private DefaultTableModel tabla;
-    public ConsPacienteInternalFrame() {
+    private DefaultTableModel tablaMed;
+    private final GestorMedicoControl gestorMedicoControl;
+    public ConsMedicoInternalFrame() {
         initComponents();
-        gestorPacienteControl = new Controlador.GestorPacienteControl(this);
-        String titulosTabla[] = {"Indentificación", "Nombre", "Apellidos","Fecha Nacimiento", "Genero"};
-        tabla = new DefaultTableModel(null, titulosTabla);
-        Tbl_datos.setModel(tabla);
-        btn_aceptar.addActionListener(gestorPacienteControl);
-    }
-    
-    public DefaultTableModel getTableModel(){
-    return tabla;
+        gestorMedicoControl = new Controlador.GestorMedicoControl(this);
+        String titulosTabla[] = {"Indentificación", "Nombre", "Apellidos"};
+        tablaMed = new DefaultTableModel(null, titulosTabla);
+        Tbl_datos.setModel(tablaMed);
+        btn_aceptar.addActionListener(gestorMedicoControl);
     }
 
+    public DefaultTableModel getTableModel(){
+    return tablaMed;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,18 +39,17 @@ public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         rdb_identificacion = new javax.swing.JRadioButton();
         rdb_nombres = new javax.swing.JRadioButton();
         rdb_apellidos = new javax.swing.JRadioButton();
-        rdb_genero = new javax.swing.JRadioButton();
         txt_valor = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         btn_aceptar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tbl_datos = new javax.swing.JTable();
 
-        buttonGroup1.add(rdb_identificacion);
+        setTitle("Consulta Médicos");
+
         rdb_identificacion.setText("Identificación");
         rdb_identificacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,20 +57,15 @@ public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
             }
         });
 
-        buttonGroup1.add(rdb_nombres);
         rdb_nombres.setText("Nombres");
 
-        buttonGroup1.add(rdb_apellidos);
         rdb_apellidos.setText("Apellidos");
 
-        buttonGroup1.add(rdb_genero);
-        rdb_genero.setText("Sexo");
-
-        txt_valor.setText("Valor a buscar");
+        txt_valor.setText("Consulta Médicos");
 
         jTextField1.setName("ValorTxt"); // NOI18N
 
-        btn_aceptar.setText("Aceptar");
+        btn_aceptar.setText("Consulta Médicos");
         btn_aceptar.setName("AceptarBtn"); // NOI18N
 
         Tbl_datos.setModel(new javax.swing.table.DefaultTableModel(
@@ -89,47 +86,43 @@ public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addComponent(rdb_identificacion)
                 .addGap(31, 31, 31)
                 .addComponent(rdb_nombres)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rdb_apellidos)
-                .addGap(47, 47, 47)
-                .addComponent(rdb_genero)
-                .addGap(59, 59, 59))
+                .addGap(46, 46, 46))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(txt_valor)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_aceptar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(45, 45, 45)
+                .addComponent(txt_valor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_aceptar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rdb_identificacion)
                     .addComponent(rdb_nombres)
-                    .addComponent(rdb_apellidos)
-                    .addComponent(rdb_genero))
-                .addGap(18, 18, 18)
+                    .addComponent(rdb_apellidos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_valor)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_aceptar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -143,11 +136,9 @@ public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTable Tbl_datos;
     public javax.swing.JButton btn_aceptar;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     public javax.swing.JRadioButton rdb_apellidos;
-    public javax.swing.JRadioButton rdb_genero;
     public javax.swing.JRadioButton rdb_identificacion;
     public javax.swing.JRadioButton rdb_nombres;
     public javax.swing.JLabel txt_valor;
